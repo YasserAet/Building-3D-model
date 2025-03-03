@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Floor Plan</title>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+        #buttons { position: absolute; top: 10px; left: 10px; }
+    </style>
+</head>
+<body>
+    <div id="buttons">
+        <button onclick="showFloor('floor1')">Floor 1</button>
+        <button onclick="showFloor('floor2')">Floor 2</button>
+        <button onclick="showFloor('floor3')">Floor 3</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.9.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
