@@ -68,23 +68,14 @@ function showFloor(floorName) {
         floor.visible = false;
     });
 
-    // Sort floor names to determine visibility order
-    const sortedFloorNames = Object.keys(floors).sort();
-
-    // Find the index of the specified floor
-    const floorIndex = sortedFloorNames.indexOf(floorName);
-
-    // Make the specified floor and all floors below it visible
-    if (floorIndex !== -1) {
-        for (let i = 0; i <= floorIndex; i++) {
-            floors[sortedFloorNames[i]].visible = true;
-        }
-        console.log(`Floors up to "${floorName}" are now visible.`);
+    // Check if the floor exists
+    if (floors[floorName]) {
+        floors[floorName].visible = true;
+        console.log(`Floor "${floorName}" is now visible.`);
     } else {
         console.warn(`Floor "${floorName}" not found.`);
     }
 }
-
 // Optional: Hover effects
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
